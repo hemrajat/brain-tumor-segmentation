@@ -11,5 +11,18 @@ Brats2020 dataset which have 370 exmaple of each containing flair,t1,t2,t1ce,seg
 5. stacked_img & changed_mask define out one input example
 
 ## Model
-Used UNET-3D model 
-![2-Figure1-1](https://user-images.githubusercontent.com/85800858/148729128-0364e0dc-0b2e-4403-a0ff-38848e011ca8.png)
+Used UNET-3D model ![1*x0kR2rGlTibVbu8InCNBVg](https://user-images.githubusercontent.com/85800858/148729282-15419fb0-ab42-4e5f-98ee-504c07888637.jpeg)
+Input size was 128,128,128,3
+output size was 128,128,128,4(num_of_classes)
+
+## Defining loss function and optimizer
+Used dice loss & focal loss as loss with Adam optimzer at LR = 0.0001
+
+## Predictions 
+Due to lack of resource I couldn't train for longer but after 25 epochs with 100 steps per epochs model did well in tumour segmentation.
+Here is one example
+<img width="721" alt="Screenshot 2022-01-09 at 9 32 42 PM" src="https://user-images.githubusercontent.com/85800858/148729655-f5376f4c-792f-49b7-9777-1c1059f6d9e2.png">
+
+## References
+1. Research paper by Hao Dong, Guang Yang, Fangde Liu, Yuanhan Mo, Yike Guo https://arxiv.org/abs/1705.03820
+2. My kaggle notebook code reference https://www.kaggle.com/rudraman/brain-tumour-segementation#Image-generator-for-keras-modeal

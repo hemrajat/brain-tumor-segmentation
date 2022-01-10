@@ -8,7 +8,6 @@ https://www.kaggle.com/awsaf49/brats20-dataset-training-validation
 1. Tensorflow
 2. numpy
 3. nibabel for reading nifti data
-4. 
 ## Preprocessing data
 1. Normaling every image using mean-std method.
 2. Since t1 format does not have much information about tumour ignore it and stack flair,t2,t1ce images along 3rd axis
